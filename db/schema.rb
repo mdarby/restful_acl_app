@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20091123190147) do
 
   create_table "parent_widgets", :force => true do |t|
     t.string   "name"
+    t.boolean  "is_active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

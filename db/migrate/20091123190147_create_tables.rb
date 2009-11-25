@@ -19,6 +19,7 @@ class CreateTables < ActiveRecord::Migration
 
     create_table :parent_widgets, :force => true do |t|
       t.string :name
+      t.boolean :is_active
       t.timestamps
     end
 
