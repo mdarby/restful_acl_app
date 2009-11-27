@@ -1,2 +1,5 @@
 %h1 Parent Widget
 %h2 Singleton Widget
+
+= link_to "Edit", edit_parent_widget_singleton_widget_path(ParentWidget.first) if updatable
+= link_to "Delete", parent_widget_singleton_widget_path(ParentWidget.first, :method => :destroy) if deletable

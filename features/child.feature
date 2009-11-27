@@ -1,4 +1,5 @@
 @children
+
 Feature: Child resources
   In order to protect my application
   As a programmer

@@ -31,12 +31,17 @@ Factory.define :singleton_widget do |s|
   s.association :parent_widget
 end
 
-Factory.define :closed_parent_widget do |c|
+Factory.define :closed_parent_widget, :parent => :parent_widget do |c|
   c.name "Closed Parent Widget"
   c.is_active false
 end
 
-Factory.define :child_widget_in_closed_parent do |c|
+Factory.define :child_widget_in_closed_parent, :parent => :child_widget do |c|
   c.name "Child Widget in closed parent"
+  c.association :parent_widget, :factory => :closed_parent_widget
+end
+
+Factory.define :singleton_widget_in_closed_parent, :parent => :singleton_widget do |c|
+  c.name "Singleton Child Widget in closed parent"
   c.association :parent_widget, :factory => :closed_parent_widget
 end

@@ -1,3 +1,5 @@
 %h1 Parent Widget
 
 = link_to "Destroy", parent_widget_path(@parent_widget), :method => :delete
+= link_to "Create Child Widget", new_parent_widget_child_widget_path(@parent_widget) if creatable
+= link_to "Create Singleton Widget", new_parent_widget_singleton_widget_path(@parent_widget) if creatable

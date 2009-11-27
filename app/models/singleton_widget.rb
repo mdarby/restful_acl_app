@@ -5,7 +5,7 @@ class SingletonWidget < ActiveRecord::Base
 
   # This method checks permissions for the :index action
   def self.is_indexable_by(user, parent = nil)
-    user.allowed? && parent.is_active
+    user.allowed?
   end
 
   # This method checks permissions for the :create and :new action
@@ -15,7 +15,7 @@ class SingletonWidget < ActiveRecord::Base
 
   # This method checks permissions for the :show action
   def is_readable_by(user, parent = nil)
-    user.allowed? && parent.is_active
+    user.allowed?
   end
 
   # This method checks permissions for the :update and :edit action
