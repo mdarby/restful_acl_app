@@ -14,4 +14,4 @@ Feature: Helper methods
     Given I am logged in as an "employee"
     And a "parent_widget" exists
     And I am on the child_widgets page
-    Then I should see "Create"
+    Then I should see "Create Child"

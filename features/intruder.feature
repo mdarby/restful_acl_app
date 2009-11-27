@@ -1,3 +1,5 @@
+@intruder
+
 Feature: Intruder features
   In order to protect my application
   As a programmer

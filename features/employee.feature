@@ -7,7 +7,7 @@ Feature: Employee features
     Given I am logged in as an "employee"
     And a "parent_widget" exists
     And I am on the parent_widgets page
-    Then I should see "1 parent widget"
+    Then I should see "Parent Widget"
 
   Scenario: An Employee creating a Parent Widget
     Given I am logged in as an "employee"
