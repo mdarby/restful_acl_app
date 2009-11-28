@@ -2,4 +2,4 @@
 %h2 Singleton Widget
 
 = allowed?{ link_to "Edit", edit_parent_widget_singleton_widget_path(ParentWidget.first) }
-= allowed?{ link_to "Delete", parent_widget_singleton_widget_path(ParentWidget.first, :method => :destroy) }
+= allowed?{ link_to "Delete", parent_widget_singleton_widget_path(ParentWidget.first), :method => :delete }

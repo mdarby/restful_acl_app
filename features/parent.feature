@@ -11,7 +11,6 @@ Feature: Parent resources
     When I am on the parent_widgets page
     Then I should see "Parent Widgets"
 
-  @debug
   Scenario: Viewing a parent resource
     Given I am logged in as an "employee"
     And a "parent_widget" exists

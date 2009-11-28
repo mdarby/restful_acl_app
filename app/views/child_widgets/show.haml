@@ -2,4 +2,4 @@
 %h2 Child Widget
 
 = allowed?{ link_to "Edit", edit_parent_widget_child_widget_path(ParentWidget.first, ChildWidget.first) }
-= allowed?{ link_to "Delete", parent_widget_child_widget_path(ParentWidget.first, ChildWidget.first, :method => :destroy) }
+= allowed?{ link_to "Delete", parent_widget_child_widget_path(ParentWidget.first, ChildWidget.first), :method => :delete }
