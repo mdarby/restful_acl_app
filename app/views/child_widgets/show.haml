@@ -1,5 +1,5 @@
 %h1 Parent Widget
 %h2 Child Widget
 
-= link_to "Edit", edit_parent_widget_child_widget_path(ParentWidget.first, ChildWidget.first) if updatable
-= link_to "Delete", parent_widget_child_widget_path(ParentWidget.first, ChildWidget.first, :method => :destroy) if deletable
+= allowed?{ link_to "Edit", edit_parent_widget_child_widget_path(ParentWidget.first, ChildWidget.first) }
+= allowed?{ link_to "Delete", parent_widget_child_widget_path(ParentWidget.first, ChildWidget.first, :method => :destroy) }
