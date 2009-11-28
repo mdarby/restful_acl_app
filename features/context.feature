@@ -35,7 +35,6 @@ Feature: Context-based access
     And I am on the child_widget page
     Then I should not see "Delete"
 
-  @debug
   Scenario: Destroy a Child Widget in an open Parent Widget
     Given I am logged in as an "employee"
     And a "child_widget" exists
