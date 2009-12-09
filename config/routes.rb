@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :parent_widgets do |w|
+  map.resources :parent_widgets, :collection => {:obsolete => :get} do |w|
     w.resources :child_widgets
     w.resource  :singleton_widget
   end

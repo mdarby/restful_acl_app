@@ -1,0 +1,6 @@
+= link_to "Old Style Create", new_parent_widget_path if creatable?
+
+- if ParentWidget.count > 0
+    = link_to "Old Style Show", parent_widget_path(@parent_widget) if readable?
+    = link_to "Old Style Delete", parent_widget_path(@parent_widget), :method => "destroy" if deletable?
+    = link_to "Old Style Edit", edit_parent_widget_path(@parent_widget) if updatable?

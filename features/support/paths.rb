@@ -5,6 +5,8 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /obsolete page/
+      "/parent_widgets/obsolete"
     when /the parent_widgets page/
       parent_widgets_path
     when /the new_parent_widget page/
