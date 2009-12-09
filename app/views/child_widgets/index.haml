@@ -1,4 +1,5 @@
 %h1 Parent Widget
 %h2 Child Widget
 
-= allowed?{ link_to "Create Child", new_parent_widget_child_widget_path(ParentWidget.first) }
+= allowed?{ link_to "View Child", parent_widget_child_widget_path(@parent_widget, ChildWidget.first)}
+= allowed?{ link_to "Create Child", new_parent_widget_child_widget_path(@parent_widget) }

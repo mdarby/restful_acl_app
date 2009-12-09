@@ -1,3 +1,8 @@
 %h1 Parent Widgets
 
 = allowed?{ link_to "Create", new_parent_widget_path }
+
+- if ParentWidget.count > 0
+  = allowed?{ link_to "View Parent", parent_widget_path(ParentWidget.first) }
+
+= link_to "Create", new_parent_widget_path if creatable?
