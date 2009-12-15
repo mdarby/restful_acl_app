@@ -1,3 +1,3 @@
 Given /^a ([^\"]*) exists$/ do |factory|
-  Factory(factory.to_sym)
+  instance_variable_set "@#{factory}", Factory(factory.to_sym)
 end
