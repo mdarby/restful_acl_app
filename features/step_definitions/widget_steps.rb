@@ -1,3 +1,3 @@
-Given /^a "([^\"]*)" exists$/ do |factory|
+Given /^a ([^\"]*) exists$/ do |factory|
   Factory(factory.to_sym)
 end
