@@ -12,23 +12,23 @@ module NavigationHelpers
     when /the new_parent_widget page/
       new_parent_widget_path
     when /the parent_widget page/
-      parent_widget_path(ParentWidget.first)
+      parent_widget_path(:id => 1)
     when /the edit_parent_widget page/
-      edit_parent_widget_path(ParentWidget.first)
+      edit_parent_widget_path(:id => 1)
     when /the singleton_widget page/
-      parent_widget_singleton_widget_path(ParentWidget.first)
+      parent_widget_singleton_widget_path(:parent_widget_id => 1)
     when /the new_singleton_widget page/
-      new_parent_widget_singleton_widget_path(ParentWidget.first)
+      new_parent_widget_singleton_widget_path(:parent_widget_id => 1)
     when /the edit_singleton_widget page/
-      edit_parent_widget_singleton_widget_path(ParentWidget.first)
+      edit_parent_widget_singleton_widget_path(:parent_widget_id => 1)
     when /the child_widgets page/
-      parent_widget_child_widgets_path(ParentWidget.first)
+      parent_widget_child_widgets_path(:parent_widget_id => 1)
     when /the child_widget page/
-      parent_widget_child_widget_path(ParentWidget.first, ChildWidget.first)
+      parent_widget_child_widget_path(:parent_widget_id => 1, :id => 1)
     when /the new_child_widget page/
-      new_parent_widget_child_widget_path(ParentWidget.first)
+      new_parent_widget_child_widget_path(:parent_widget_id => 1)
     when /the edit_child_widget page/
-      edit_parent_widget_child_widget_path(ParentWidget.first, ChildWidget.first)
+      edit_parent_widget_child_widget_path(:parent_widget_id => 1, :id => 1)
     else
       raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
         "Now, go and add a mapping in #{__FILE__}"
